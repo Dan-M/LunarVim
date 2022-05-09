@@ -97,7 +97,8 @@ local core_plugins = {
     "hrsh7th/cmp-path",
   },
   {
-    "folke/lua-dev.nvim",
+    -- NOTE: Temporary fix till folke comes back
+    "max397574/lua-dev.nvim",
     module = "lua-dev",
   },
 
@@ -147,7 +148,7 @@ local core_plugins = {
 
   -- Whichkey
   {
-    "folke/which-key.nvim",
+    "max397574/which-key.nvim",
     config = function()
       require("lvim.core.which-key").setup()
     end,
@@ -213,7 +214,8 @@ local core_plugins = {
 
   -- Debugger management
   {
-    "Pocco81/DAPInstall.nvim",
+    "Pocco81/dap-buddy.nvim",
+    branch = "dev",
     -- event = "BufWinEnter",
     -- event = "BufRead",
     disable = not lvim.builtin.dap.active,
